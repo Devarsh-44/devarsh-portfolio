@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devarsh Kotak | Backend Engineer & IT Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              racing: {
+                red: "#E10600", // Official F1 Red
+                charcoal: "#15151E", // F1 Dark Background
+                silver: "#D0D0D2",
+                gray: "#25252D",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["Roboto Mono", "monospace"],
+            },
+            animation: {
+              "status-blink": "blink 1.5s step-end infinite",
+              "fade-in-up": "fadeInUp 0.8s ease-out forwards",
+              "reveal-text":
+                "reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #0b0b0f;
+        color: #ffffff;
+        font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+      }
+      .telemetry-line {
+        background: linear-gradient(90deg, transparent, #e10600, transparent);
+        height: 1px;
+        opacity: 0.3;
+      }
+      .grid-bg {
+        background-image: radial-gradient(
+          circle at 2px 2px,
+          rgba(255, 255, 255, 0.05) 1px,
+          transparent 0
+        );
+        background-size: 40px 40px;
+      }
+      .f1-border {
+        border-left: 4px solid #e10600;
+      }
+      .glass-panel {
+        background: rgba(21, 21, 30, 0.8);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      @keyframes scanline {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+      .scanline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: rgba(225, 6, 0, 0.1);
+        animation: scanline 8s linear infinite;
+        pointer-events: none;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+          clip-path: inset(0 100% 0 0);
+        }
+        to {
+          opacity: 1;
+          clip-path: inset(0 0 0 0);
+        }
+      }
+
+      .animate-delay-100 {
+        animation-delay: 100ms;
+      }
+      .animate-delay-200 {
+        animation-delay: 200ms;
+      }
+      .animate-delay-300 {
+        animation-delay: 300ms;
+      }
+      .animate-delay-500 {
+        animation-delay: 500ms;
+      }
+
+      /* Custom scrollbar for telemetry feel */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0b0b0f;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #25252d;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #e10600;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@^19.2.3",
+          "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+
+          "react/": "https://esm.sh/react@^19.2.3/",
+          "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+        }
+      }
+    </script>
+    <script
+      type="module"
+      src="https://gradio.s3-us-west-2.amazonaws.com/5.47.2/gradio.js"
+    ></script>
+
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body class="grid-bg min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+  </body>
+</html>
