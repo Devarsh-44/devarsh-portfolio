@@ -410,25 +410,25 @@ const Navbar = () => (
           onClick={() => scrollToId("about")}
           className="hover:text-racing-red transition-colors cursor-pointer outline-none uppercase"
         >
-          01_ABOUT
+          ABOUT
         </button>
         <button
           onClick={() => scrollToId("projects")}
           className="hover:text-racing-red transition-colors cursor-pointer outline-none uppercase"
         >
-          02_PROJECTS
+          PROJECTS
         </button>
         <button
           onClick={() => scrollToId("skills")}
           className="hover:text-racing-red transition-colors cursor-pointer outline-none uppercase"
         >
-          03_STACK
+          STACK
         </button>
         <button
           onClick={() => scrollToId("contact")}
           className="hover:text-racing-red transition-colors cursor-pointer outline-none uppercase"
         >
-          04_CONTACT
+          CONTACT
         </button>
       </div>
       <div className="hidden lg:flex items-center gap-4">
@@ -767,7 +767,7 @@ const App = () => {
               DK
             </div>
             <div className="font-mono text-[10px] text-white/20 uppercase tracking-[0.4em]">
-              © 2024 DEVARSH_KOTAK // PRODUCTION_READY
+              © 2026 DEVARSH_KOTAK // PRODUCTION_READY
             </div>
           </div>
           <div className="flex gap-12 text-[10px] font-mono text-white/10 uppercase tracking-[0.5em] font-bold">
