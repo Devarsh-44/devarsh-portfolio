@@ -693,10 +693,10 @@ const App = () => {
                   Engineering, or IT Infrastructure within Canada.
                 </p>
 
-                <div className="grid sm:grid-cols-2 gap-8 mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
                   <a
                     href={`mailto:${EMAIL}`}
-                    className="flex items-center gap-6 p-8 bg-white/5 border border-white/5 hover:border-racing-red transition-all group backdrop-blur-sm shadow-xl"
+                    className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 sm:p-8 bg-white/5 border border-white/5 hover:border-racing-red transition-all group backdrop-blur-sm shadow-xl"
                   >
                     <div className="p-4 bg-racing-red text-white transition-transform group-hover:rotate-12 group-hover:scale-110 shadow-lg">
                       <Mail size={24} />
@@ -712,7 +712,7 @@ const App = () => {
                   </a>
                   <a
                     href={`tel:${PHONE_NUMBER.replace(/\D/g, "")}`}
-                    className="flex items-center gap-6 p-8 bg-white/5 border border-white/5 hover:border-racing-red transition-all group backdrop-blur-sm shadow-xl"
+                    className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-4 sm:p-8 bg-white/5 border border-white/5 hover:border-racing-red transition-all group backdrop-blur-sm shadow-xl"
                   >
                     <div className="p-4 bg-racing-red text-white transition-transform group-hover:-rotate-12 group-hover:scale-110 shadow-lg">
                       <Phone size={24} />
