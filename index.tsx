@@ -470,7 +470,7 @@ const Hero = ({ onOpenChat }: { onOpenChat: () => void }) => (
             </span>
           </h1>
           <p className="max-w-xl text-lg text-white/60 font-medium leading-relaxed opacity-0 animate-fade-in-up animate-delay-300">
-            Computer Science professional specializing in backend architecture
+            Computer Science professional specializing in Full-stack development
             and data engineering, with a strong focus on building reliable,
             scalable, and maintainable systems.
           </p>
@@ -583,10 +583,10 @@ const App = () => {
                   <span className="text-white font-bold">
                     Computer Science professional
                   </span>{" "}
-                  based in Brampton, focused on backend architecture and system
-                  reliability. I build scalable, high-performance services with
-                  an emphasis on correctness, maintainability, and real-world
-                  production use.
+                  based in Brampton, focused on Full-stack development and data
+                  engineering and system reliability. I build scalable,
+                  high-performance services with an emphasis on correctness,
+                  maintainability, and real-world production use.
                 </p>
                 <p>
                   My experience spans backend development and systems support,
@@ -689,8 +689,9 @@ const App = () => {
                   subtitle="Open for Professional Inquiry"
                 />
                 <p className="text-2xl md:text-3xl text-white/80 mb-16 font-bold tracking-tight leading-tight">
-                  Seeking opportunities in Application Support, Backend
-                  Engineering, or IT Infrastructure within Canada.
+                  Seeking opportunities in Application Support,Full-stack
+                  development, data engineering or IT Infrastructure within
+                  Canada.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
