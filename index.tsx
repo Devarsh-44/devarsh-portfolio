@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { createRoot } from "react-dom/client";
+import { Analytics } from "@vercel/analytics/react";
 import {
   Github,
   Linkedin,
@@ -802,6 +803,7 @@ const App = () => {
           <div className="absolute inset-0 border border-racing-red rounded-sm animate-ping opacity-20 pointer-events-none"></div>
         </button>
       )}
+      <Analytics />
     </div>
   );
 };
