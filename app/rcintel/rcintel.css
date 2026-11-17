@@ -1,0 +1,89 @@
+/* RCintel coming-soon page. Brand tokens (--rc-*) live in app/globals.css. */
+.rc {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(60rem 36rem at 18% 8%, rgb(115 147 179 / 0.16), transparent 70%),
+    radial-gradient(40rem 30rem at 95% 100%, rgb(201 184 154 / 0.08), transparent 70%),
+    var(--rc-night-slate);
+  color: var(--rc-warm-off-white);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.rc ::selection {
+  background: var(--rc-blue-gray);
+  color: var(--rc-night-slate);
+}
+
+.rc :focus-visible {
+  outline-color: var(--rc-almond);
+}
+
+.rc-display {
+  font-family: var(--font-sora), system-ui, sans-serif;
+}
+
+.rc-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--rc-blue-gray-300);
+}
+
+.rc-foil-rule {
+  height: 2px;
+  width: 4.5rem;
+  background: var(--rc-foil-gradient);
+}
+
+.rc-enter {
+  animation: rc-rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(var(--d, 0) * 90ms);
+}
+
+@keyframes rc-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+.rc-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  background: var(--rc-almond);
+  padding: 0.85rem 1.5rem;
+  font-weight: 500;
+  color: var(--rc-night-slate);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.rc-cta:hover {
+  background: var(--rc-warm-off-white);
+  transform: translateY(-2px);
+}
+
+.rc-link {
+  color: var(--rc-blue-gray-300);
+  text-underline-offset: 0.3em;
+}
+
+.rc-link:hover {
+  color: var(--rc-warm-off-white);
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rc-enter {
+    animation: none;
+  }
+  .rc-cta:hover {
+    transform: none;
+  }
+}

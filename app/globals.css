@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Canvas (dark desk) */
+  --color-canvas: #111111;
+  --color-canvas-grid: #1e1e22;
+  --color-chalk: #ede8df;
+  --color-chalk-muted: #a3a3a8;
+
+  /* Paper (cards, notes) */
+  --color-paper: #f4efe6;
+  --color-paper-grid: #e6dec8;
+  --color-ink: #18181b;
+  --color-ink-soft: #27272a;
+
+  /* Accents */
+  --color-accent: #d94e34;
+  --color-streak: #22d3ee;
+
+  /* Intro curtain */
+  --color-curtain: #0b0b0d;
+
+  /* RCintel Studio Bridge and /rcintel only (brand kit values) */
+  --color-studio: #7393b3;
+  --color-studio-300: #9db4cb;
+  --color-studio-night: #1f2a36;
+  --color-studio-slate: #2b3a4c;
+  --color-studio-almond: #e1d4c0;
+  --color-studio-white: #f3eee5;
+
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-geist), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-chalk);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-paper);
+}
+
+/* Dark technical grid for the canvas */
+.bg-canvas-grid {
+  background-color: var(--color-canvas);
+  background-image:
+    linear-gradient(var(--color-canvas-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-canvas-grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Graph paper for cream cards */
+.bg-paper-grid {
+  background-color: var(--color-paper);
+  background-image:
+    linear-gradient(var(--color-paper-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-paper-grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Ruled paper for notes */
+.bg-paper-ruled {
+  background-color: var(--color-paper);
+  background-image: linear-gradient(var(--color-paper-grid) 1px, transparent 1px);
+  background-size: 100% 28px;
+  background-position: 0 12px;
+}
+
+/* ── Intro curtain ───────────────────────────────────────────── */
+/* Skipped before first paint for repeat visits and reduced motion. */
+html[data-intro="skip"] .intro-curtain {
+  display: none;
+}
+
+/* Failsafe: if JS never runs, the curtain still gets out of the way. */
+.intro-curtain {
+  animation: intro-failsafe 0s linear 5s forwards;
+}
+
+@keyframes intro-failsafe {
+  to {
+    visibility: hidden;
+  }
+}
+
+.intro-beam {
+  background: linear-gradient(100deg, var(--color-accent), #ffe9e0 55%, var(--color-streak));
+}
+
+/* ── Ambient light streaks ───────────────────────────────────── */
+.streak {
+  position: absolute;
+  left: 0;
+  height: 1px;
+  width: 42vw;
+  background: linear-gradient(90deg, transparent, rgb(34 211 238 / 0.45), transparent);
+  box-shadow: 0 0 12px rgb(34 211 238 / 0.25);
+  animation: streak-sweep var(--streak-duration, 9s) linear var(--streak-delay, 0s) infinite;
+  transform: translate3d(-60vw, 0, 0);
+  will-change: transform;
+}
+
+@keyframes streak-sweep {
+  0% {
+    transform: translate3d(-60vw, 0, 0);
+    opacity: 0;
+  }
+  10%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(170vw, 0, 0);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .streak {
+    display: none;
+  }
+}
+
+/* ── RCintel brand tokens (from the brand kit, 06-Colours) ────── */
+:root {
+  --rc-blue-gray: #7393b3;
+  --rc-blue-gray-300: #9db4cb;
+  --rc-blue-gray-700: #5f7f9f;
+  --rc-almond: #e1d4c0;
+  --rc-deep-slate: #2b3a4c;
+  --rc-night-slate: #1f2a36;
+  --rc-warm-off-white: #f3eee5;
+  --rc-champagne-foil: #c9b89a;
+  --rc-foil-gradient: linear-gradient(
+    135deg,
+    #bfae8e 0%,
+    #f4ecdd 30%,
+    #c2b08f 50%,
+    #ede3d1 72%,
+    #a8946f 100%
+  );
+}
+
+/* Shift lights: the row from the RCintel monogram, lighting up left to right. */
+.rc-lights {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.rc-lights span {
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 0.2rem;
+  animation: rc-light 3.6s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.14s);
+}
+
+.rc-lights span:nth-child(-n + 4) {
+  background: var(--rc-foil-gradient);
+}
+.rc-lights span:nth-child(n + 5):nth-child(-n + 6) {
+  background: var(--rc-blue-gray);
+}
+.rc-lights span:nth-child(n + 7) {
+  background: var(--rc-deep-slate);
+  box-shadow: inset 0 0 0 1px rgb(157 180 203 / 0.35);
+}
+
+@keyframes rc-light {
+  0%,
+  8% {
+    opacity: 0.25;
+  }
+  22%,
+  78% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+
+/* ── Cutting mat (Work section) ──────────────────────────────── */
+.cutting-mat {
+  background-color: #141416;
+  background-image:
+    linear-gradient(rgb(237 232 223 / 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(237 232 223 / 0.09) 1px, transparent 1px),
+    linear-gradient(rgb(237 232 223 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(237 232 223 / 0.035) 1px, transparent 1px);
+  background-size:
+    96px 96px,
+    96px 96px,
+    24px 24px,
+    24px 24px;
+}
+
+.ruler-x {
+  height: 14px;
+  background-image:
+    linear-gradient(90deg, rgb(237 232 223 / 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(237 232 223 / 0.3) 1px, transparent 1px);
+  background-size:
+    96px 14px,
+    24px 7px;
+  background-repeat: repeat-x;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rc-lights span {
+    animation: none;
+  }
+}

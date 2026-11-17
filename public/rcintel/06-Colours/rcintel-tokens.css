@@ -1,0 +1,14 @@
+:root {
+  --rc-blue-gray: #7393B3;
+  --rc-blue-gray-300: #9DB4CB;
+  --rc-blue-gray-700: #5F7F9F;
+  --rc-almond: #E1D4C0;
+  --rc-deep-slate: #2B3A4C;
+  --rc-night-slate: #1F2A36;
+  --rc-warm-off-white: #F3EEE5;
+  --rc-champagne-foil: #C9B89A;
+  --rc-foil-gradient: linear-gradient(135deg, #BFAE8E 0%, #F4ECDD 30%, #C2B08F 50%, #EDE3D1 72%, #A8946F 100%);
+  --rc-font-display: "Sora", system-ui, sans-serif;
+  --rc-font-body: "Inter", system-ui, sans-serif;
+  --rc-font-script: "Sacramento", cursive;
+}

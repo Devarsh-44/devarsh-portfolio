@@ -1,0 +1,8 @@
+RCintel typefaces (all free, SIL Open Font Licence, commercial and logo use allowed)
+
+Sora        Bold 700, SemiBold 600, Light 300   Headlines, numbers, display        https://fonts.google.com/specimen/Sora
+Inter       Regular 400, Medium 500             Body text, UI, spaced labels       https://fonts.google.com/specimen/Inter
+Sacramento  Regular 400                         Logo only: the "intel" signature   https://fonts.google.com/specimen/Sacramento
+
+Monogram R and C: custom letterforms traced from the supplied reference alphabet.
+Confirm the source typeface's licence before commercial use.

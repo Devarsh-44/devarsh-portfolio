@@ -1,0 +1,20 @@
+RCintel colour palette v2
+=========================
+
+Blue-Gray        Primary        HEX #7393B3   RGB 115 147 179   CMYK 36 18 0 30 (approx.)   Use: Badge, accents, UI highlights
+Blue-Gray 300    Tint           HEX #9DB4CB   RGB 157 180 203   CMYK 23 11 0 20 (approx.)   Use: "intel" and secondary text on dark
+Blue-Gray 700    Tint           HEX #5F7F9F   RGB  95 127 159   CMYK 40 20 0 38 (approx.)   Use: "intel" and secondary text on light
+Almond           Secondary      HEX #E1D4C0   RGB 225 212 192   CMYK 0 6 15 12 (approx.)   Use: Character, monogram on dark, warm panels
+Deep Slate       Ink            HEX #2B3A4C   RGB  43  58  76   CMYK 43 24 0 70 (approx.)   Use: Text, outlines, eyes, monogram on light
+Night Slate      Dark ground    HEX #1F2A36   RGB  31  42  54   CMYK 43 22 0 79 (approx.)   Use: Main dark background
+Warm Off-White   Light ground   HEX #F3EEE5   RGB 243 238 229   CMYK 0 2 6 5 (approx.)   Use: Main light background
+Champagne Foil   Accent finish  HEX #C9B89A   RGB 201 184 154   CMYK 0 8 23 21 (approx.)   Use: Foil monogram, seal, special moments
+
+Champagne Foil gradient (diagonal, top-left to bottom-right):
+    0%  #BFAE8E
+   30%  #F4ECDD
+   50%  #C2B08F
+   72%  #EDE3D1
+  100%  #A8946F
+
+Print foil: specify a matte champagne/pale-gold hot foil and match to HEX #C9B89A.

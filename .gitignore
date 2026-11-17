@@ -1,35 +1,18 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-# Dependencies
 node_modules
-
-# Build output
-dist
-dist-ssr
-
-# Environment
-.env
-.env.*
-*.local
-
-# Deployment
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+.env*
+!.env.example
 .vercel
-.cache
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Private: contains my phone number. Stays local as the source of truth for facts.
+resume.md
+
+# Third-party reference screenshots: for structure and mood only, not mine to publish.
+portfolio-inspo/
+
+# Local backups
+*.bak
+*.backup.txt
