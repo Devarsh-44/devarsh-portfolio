@@ -150,18 +150,18 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    // DRAFT: rewritten from the live site and its repo (github.com/Devarsh-44/R1360), November 2026.
+    // DRAFT: rewritten from the live site and its repo (github.com/Devarsh-44/R1360), updated 2026-11-21.
     slug: "ri360",
     title: "RI360 (RaceIntel360)",
     kicker: "F1 race analysis site and data pipeline",
     tier: "featured",
-    stack: ["Python", "FastF1", "pandas", "FastAPI", "React", "TypeScript", "d3", "GitHub Actions"],
+    stack: ["Python", "FastF1", "OpenF1", "pandas", "FastAPI", "React", "TypeScript", "d3", "GitHub Actions"],
     points: [
-      "Five seasons of Formula 1 timing data, 96,223 laps from 89 races, turned into race traces, tyre strategies and a strategy lab where you can re-run a race on different tyres.",
-      "The pipeline found 27,986 duplicated laps in the export, removed them, and cross-checked 94,490 lap times against the raw timing feed.",
+      "Eight seasons of Formula 1 timing data, 172,337 laps from 157 races, turned into race traces, tyre strategies and a strategy lab where you can re-run a race on different tyres. Each new race is added automatically the morning after it's run.",
+      "The pipeline found 27,986 duplicated laps in the original export, removed them, and cross-checked 94,490 lap times against the raw timing feed.",
       "I designed it in Figma in a light paper theme and a dark pit wall theme, then built the site in React with hand-built SVG charts.",
     ],
-    note: "RI360 is the first product built in the pit-wall style that RCintel will work in.",
+    note: "RI360 launches as an Android app in 2027. It is the first product built in the pit-wall style that RCintel will work in.",
     link: {
       label: "ri360.vercel.app",
       href: "https://ri360.vercel.app/",
@@ -343,7 +343,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "ri360",
     title: "RI360 — F1 Race Analysis Site",
     kicker: "Data pipeline, design and front end",
-    subtitle: "Five seasons of Formula 1 timing data, turned into a site you can question.",
+    subtitle: "Eight seasons of Formula 1 timing data, turned into a site you can question.",
     category: "telemetry",
     categoryLabel: "Data & Motorsport",
     year: "2026",
@@ -351,17 +351,17 @@ export const caseStudies: CaseStudy[] = [
     client: "Self-initiated",
     deliverables: ["Data pipeline", "Pace model", "Figma screens", "React site"],
     metrics: [
-      { label: "Laps analysed", value: "96,223" },
-      { label: "Races", value: "89" },
+      { label: "Laps analysed", value: "172,337" },
+      { label: "Races", value: "157" },
       { label: "Duplicates removed", value: "27,986" },
-      { label: "Race models", value: "86" },
+      { label: "Race models", value: "151" },
     ],
     summary: [
-      "Race traces, tyre strategies and a strategy lab built from 96,223 real timing laps across the 2019 to 2023 seasons.",
+      "Race traces, tyre strategies and a strategy lab built from 172,337 real timing laps across the 2019 to 2026 seasons, with each new race added the morning after it's run.",
       "The pipeline removes 27,986 duplicated laps and checks 94,490 lap times against the raw timing feed. Every one matches.",
-      "Each race gets its own pace model: one equation whose median error on held-out laps is 0.47 seconds.",
+      "Each race gets its own pace model: one equation whose median error on held-out laps is 0.46 seconds.",
     ],
-    stack: ["Python", "FastF1", "pandas", "FastAPI", "React", "TypeScript", "d3"],
+    stack: ["Python", "FastF1", "OpenF1", "pandas", "FastAPI", "React", "TypeScript", "d3"],
     href: "/case-studies/ri360",
     isExternal: false,
     ctaLabel: "Read case study",
@@ -436,6 +436,29 @@ export const work = {
   studyLabel: "Read the case study",
 };
 
+/**
+ * Case-study index on the home page: rows plus one large preview.
+ * DRAFT: labels and alt text written for Devarsh to edit.
+ */
+export const studyIndex = {
+  draft: true,
+  listLabel: "Case studies",
+  media: {
+    portfolio: {
+      src: "/images/portfolio/new-hero.jpg",
+      alt: "The new portfolio hero: a cream graph-paper card with a terracotta border and Devarsh Kotak in a serif face.",
+    },
+    ri360: {
+      src: "/images/ri360/overview-paper.jpg",
+      alt: "RI360 overview page in the paper theme: the headline 172,337 laps, one pit wall.",
+    },
+    "safal-vidyalaya": {
+      src: "/images/safal/after-home.jpg",
+      alt: "The redesigned Safal Vidyalaya home page with the headline Where bright minds learn to bloom.",
+    },
+  } as Record<string, { src: string; alt: string }>,
+};
+
 export const studioBridge = {
   eyebrow: "now",
   here: "Portfolio",
@@ -505,7 +528,7 @@ export const ri360Compare = {
       tab: "Overview",
       before: {
         src: "/images/ri360/overview-paper.jpg",
-        alt: "RI360 overview page in the light paper theme: the headline 96,223 laps, one pit wall, beside a race trace chart.",
+        alt: "RI360 overview page in the light paper theme: the headline 172,337 laps, one pit wall, beside a race trace chart.",
       },
       after: {
         src: "/images/ri360/overview-pit.jpg",
@@ -517,7 +540,7 @@ export const ri360Compare = {
       tab: "Race",
       before: {
         src: "/images/ri360/race-paper.jpg",
-        alt: "RI360 race page for the 2022 Abu Dhabi Grand Prix in the paper theme, with a driver picker and a race trace.",
+        alt: "RI360 race page for the 2022 Abu Dhabi Grand Prix in the paper theme: the winner, his tyre strategy, laps, fastest lap, pit stop cost and weather.",
       },
       after: {
         src: "/images/ri360/race-pit.jpg",
@@ -543,7 +566,7 @@ export const ri360Compare = {
  * RI360 case study (/case-studies/ri360).
  * Facts come from the live site (ri360.vercel.app), its repo
  * (github.com/Devarsh-44/R1360: README, Method page, frontend/public/data/index.json
- * generated 2026-11-16) and the layer list of the Figma file. Nothing is estimated.
+ * generated 2026-11-20) and the layer list of the Figma file. Nothing is estimated.
  * DRAFT: all prose here was written for Devarsh to edit and approve.
  */
 export const ri360Study = {
@@ -551,7 +574,7 @@ export const ri360Study = {
   meta: {
     title: "RI360 F1 race analysis site · Case study · Devarsh Kotak",
     description:
-      "How I built RI360: a data pipeline, a pace model and a website that turn 96,223 Formula 1 laps into race traces and a strategy lab. Includes the data problem I found and a model you can try.",
+      "How I built RI360: a data pipeline, a pace model and a website that turn 172,337 Formula 1 laps into race traces and a strategy lab, updated after every race. Includes the data problem I found and a model you can try.",
   },
   crumb: "ri360",
   crumbParent: "case-studies",
@@ -562,7 +585,7 @@ export const ri360Study = {
   },
   hero: {
     eyebrow: "Case study · Data product, designed and built",
-    heading: "Five seasons of Formula 1, turned into a site you can question.",
+    heading: "Eight seasons of Formula 1, turned into a site you can question.",
     lead: "RI360 takes raw race timing data and makes it readable: who was fast, what each tyre cost, and what would have happened on a different strategy. I built the data pipeline, designed the screens and wrote the site.",
     liveCta: "Open the live site",
     repoCta: "View the code",
@@ -571,12 +594,12 @@ export const ri360Study = {
       { label: "Project", value: "Self-initiated product" },
       { label: "My role", value: "Data pipeline, design, front end" },
       { label: "Built with", value: "Python, FastAPI, React, TypeScript" },
-      { label: "Status", value: "Live" },
+      { label: "Status", value: "Live · Android app in 2027" },
     ],
     stats: [
-      { n: "96,223", d: "laps analysed" },
-      { n: "89", d: "races, 2019 to 2023" },
-      { n: "86", d: "race models fitted" },
+      { n: "172,337", d: "laps analysed" },
+      { n: "157", d: "races, 2019 to 2026" },
+      { n: "151", d: "race models fitted" },
       { n: "100%", d: "of checked lap times match the raw feed" },
     ],
   },
@@ -588,7 +611,7 @@ export const ri360Study = {
   data: {
     eyebrow: "the problem",
     heading: "The data was counting laps twice",
-    intro: "Before designing anything I profiled the lap table the first version of this project had exported. Almost a quarter of it was wrong.",
+    intro: "Before designing anything I profiled the 2019 to 2023 lap table the first version of this project had exported. Almost a quarter of it was wrong.",
     steps: [
       {
         n: "124,209",
@@ -612,7 +635,7 @@ export const ri360Study = {
       {
         n: "94,490",
         label: "lap times checked against the raw timing feed",
-        body: "Every one of them matches to the millisecond. Only then did I build charts on top.",
+        body: "Every one of them matches to the millisecond. Only then did I build charts on top. With the 2024 to 2026 races added, the clean table now holds 172,337 laps.",
         share: 76.1,
       },
     ],
@@ -620,33 +643,39 @@ export const ri360Study = {
   },
   decisions: {
     eyebrow: "the build",
-    heading: "Five decisions and the reason for each",
+    heading: "Six decisions and the reason for each",
     intro: "Each one traded something away. I have said what.",
     labels: { problem: "Problem", decision: "What I did", cost: "What it costs" },
     items: [
       {
         title: "One equation instead of a black box",
         problem: "The first version used a Random Forest. It could not explain a prediction, and it had learned from the duplicated laps.",
-        decision: "Each race now gets one fitted equation: lap time = driver + fuel × laps left + tyre compound + wear × tyre age. Its median error on laps held out from training is 0.47 seconds, across 86 races.",
-        cost: "It treats tyre wear as a straight line, and three wet races get no model at all.",
+        decision: "Each race now gets one fitted equation: lap time = driver + fuel × laps left + tyre compound + wear × tyre age. Its median error on laps held out from training is 0.46 seconds, across 151 races.",
+        cost: "It treats tyre wear as a straight line, and six races get no model at all.",
       },
       {
         title: "Measure the pit stop, don't assume it",
         problem: "The old simulator charged a fixed 22 seconds for every pit stop at every circuit.",
-        decision: "I measure it from the laps: in-lap plus out-lap, minus two normal laps. A stop costs about 18.6 seconds at Spa and 29.5 at Lusail, which decides whether an extra stop can ever pay.",
+        decision: "I measure it from the laps: in-lap plus out-lap, minus two normal laps. A stop costs about 19.0 seconds at Monaco and 28.9 at Imola, which decides whether an extra stop can ever pay.",
         cost: "It needs enough green-flag stops at a circuit to be trusted.",
       },
       {
         title: "Grade every model in public",
         problem: "A model that fits one race well can fit another badly, and a chart hides that.",
-        decision: "Every fit carries a grade. 60 races have a wear rate per tyre, 12 share one rate, 7 are marked weak and 7 are mixed wet-and-dry races. The Method page lists what the model does not know.",
+        decision: "Every fit carries a grade. 116 races have a wear rate per tyre, 16 share one rate, 9 are marked weak and 10 are mixed wet-and-dry races. The Method page lists what the model does not know.",
         cost: "Some races show less than others, on purpose.",
       },
       {
         title: "No server",
         problem: "A site that needs a database and an API is slow to load and costs money to keep running.",
         decision: "The pipeline writes everything as 4.6 MB of static files: one index and one file per race. The strategy lab runs the equation in the browser and tries every one-stop and two-stop plan.",
-        cost: "New races need the pipeline to be run again and the site redeployed.",
+        cost: "Every new race means rebuilding the files. A GitHub Actions workflow does that each morning: it fetches any finished race, rebuilds the data and pushes it, and the site redeploys. If a finished race is still missing, the run fails and tells me.",
+      },
+      {
+        title: "Change data source when the archive closed",
+        problem: "The live-timing archive behind FastF1 now needs an F1TV login, so it could no longer supply new races.",
+        decision: "2019 to 2023 stays on the FastF1 data already collected. From 2024 onward each race comes from OpenF1, which is free and needs no account, with fixed race IDs so race links never change.",
+        cost: "Two sources means two importers to maintain, and only the FastF1 laps can be cross-checked against the raw timing feed.",
       },
       {
         title: "Draw the charts by hand",
@@ -686,7 +715,7 @@ export const ri360Study = {
   },
   screens: {
     eyebrow: "the screens",
-    heading: "Six pages, each with one job",
+    heading: "Seven pages, each with one job",
     intro: "Choose a page to see it.",
     tabsLabel: "Choose an RI360 page",
     items: [
@@ -700,16 +729,23 @@ export const ri360Study = {
       {
         id: "races",
         tab: "Races",
-        body: "All 89 races as cards, by season, with the winner, the winning strategy and the fastest lap.",
+        body: "All 157 races as cards, with the winner, the winning strategy and the fastest lap. Each season sits in a 3D cover-flow deck you move through by scrolling, swiping or with the arrow keys, and a search finds any race across every season. A grid view is one click away.",
         src: "/images/ri360/races-paper.jpg",
-        alt: "RI360 races page: a grid of race cards for the 2023 season.",
+        alt: "RI360 races page: the 2026 season as a cover-flow deck of race cards, with the Belgian Grand Prix at the front, a search box above and a Deck or Grid switch.",
+      },
+      {
+        id: "stories",
+        tab: "Stories",
+        body: "Every race told in six cards: the winner, the biggest climb, the strategy call, the fastest car and the conditions. The newest race is always first.",
+        src: "/images/ri360/stories-paper.jpg",
+        alt: "RI360 stories page: the latest race, the 2026 São Paulo Grand Prix, above rows of race story badges for each season.",
       },
       {
         id: "race",
         tab: "Race",
         body: "One race in full: a race trace, lap times, running order, every driver's tyre stints, best sectors, and the pace model checked against the real laps.",
         src: "/images/ri360/race-paper.jpg",
-        alt: "RI360 race page for the 2022 Abu Dhabi Grand Prix with a race trace chart.",
+        alt: "RI360 race page for the 2022 Abu Dhabi Grand Prix: the winner, his tyre strategy, laps, fastest lap, pit stop cost and weather.",
       },
       {
         id: "lab",
@@ -723,14 +759,14 @@ export const ri360Study = {
         tab: "Seasons",
         body: "A heat map of every driver's result, or pace, in every round of a season.",
         src: "/images/ri360/seasons-paper.jpg",
-        alt: "RI360 seasons page: a heat map of finishing positions for the 2023 season.",
+        alt: "RI360 seasons page: a heat map of finishing positions for the 2026 season.",
       },
       {
         id: "method",
         tab: "Method",
         body: "How the data was cleaned and checked, how the model works, and its limits.",
         src: "/images/ri360/method-paper.jpg",
-        alt: "RI360 method page with four data quality figures and the steps collect, clean, model and ship.",
+        alt: "RI360 method page with four data quality figures, then how the data is collected and how the model is fitted.",
       },
     ],
     phones: {
@@ -767,7 +803,7 @@ export const ri360Study = {
     steps: [
       {
         title: "Collect",
-        body: "A Python script uses the open-source FastF1 library to download race timing, tyre and weather data. A FastAPI service stores it in SQL: SQLite on my machine, Postgres in production.",
+        body: "Python scripts download race timing, tyre and weather data: from the open-source FastF1 library for 2019 to 2023, and from OpenF1 from 2024 onward. A FastAPI service stores it in SQL: SQLite on my machine, Postgres in production.",
       },
       {
         title: "Clean",
@@ -779,7 +815,7 @@ export const ri360Study = {
       },
       {
         title: "Ship",
-        body: "Write the result as static files and build the site. GitHub Actions checks on every push that the site builds and the API starts.",
+        body: "Write the result as static files and build the site. GitHub Actions checks on every push that the site builds and the API starts, and every morning adds any race that has finished.",
       },
     ],
   },
@@ -791,7 +827,7 @@ export const ri360Study = {
       "The 2021 season holds rounds 1 to 7 only.",
       "The live site does not use the API. All its data ships with it.",
     ],
-    credit: "Timing data comes from the FastF1 library. RI360 is an independent project and is not affiliated with Formula 1, the FIA or any team.",
+    credit: "Timing data comes from the FastF1 library for 2019 to 2023 and from OpenF1 from 2024 onward. RI360 is an independent project and is not affiliated with Formula 1, the FIA or any team.",
   },
   cta: {
     heading: "Have data that nobody can read yet?",

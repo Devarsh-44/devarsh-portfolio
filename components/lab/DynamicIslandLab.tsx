@@ -37,7 +37,6 @@ export function DynamicIslandLab({ activeTheme }: { activeTheme: "dark" | "light
       name: "RCintel Design Guidelines",
       badge: "Case Study 01 (Active)",
       role: "Studio Brand & HMI System",
-      metric: "100% Token Compliance",
       ready: true,
     },
     {
@@ -45,7 +44,6 @@ export function DynamicIslandLab({ activeTheme }: { activeTheme: "dark" | "light
       name: "RaceIntel360 (RI360)",
       badge: "Case Study 02 (Pipeline)",
       role: "F1 Telemetry Platform & ETL",
-      metric: "<12ms Query Response",
       ready: false,
     },
     {
@@ -53,7 +51,6 @@ export function DynamicIslandLab({ activeTheme }: { activeTheme: "dark" | "light
       name: "Safal Vidyalaya",
       badge: "Case Study 03 (Pipeline)",
       role: "School Web Redesign",
-      metric: "+140% Mobile Inquiries",
       ready: false,
     },
     {
@@ -61,7 +58,6 @@ export function DynamicIslandLab({ activeTheme }: { activeTheme: "dark" | "light
       name: "Bespoke Wedding RSVP",
       badge: "Case Study 04 (Client)",
       role: "End-to-End Guest System",
-      metric: "Zero Friction Deploy",
       ready: false,
     },
   ];
@@ -490,7 +486,6 @@ export function DynamicIslandLab({ activeTheme }: { activeTheme: "dark" | "light
                             >
                               {p.badge}
                             </span>
-                            <span className="text-[10px] text-[#4E8752]">{p.metric}</span>
                           </div>
                           <div className="mt-1 font-semibold text-white">{p.name}</div>
                           <div className="text-[10px] text-[#A7B4C2]">{p.role}</div>

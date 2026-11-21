@@ -336,7 +336,7 @@ function SafalVisual({ className = "", link }: { className?: string; link?: stri
 }
 
 /** RCintel Brand System & Guidelines: Studio Identity, Tokens & Cockpit HMI Specimen */
-function RCintelBrandVisual({
+export function RCintelBrandVisual({
   className = "",
   link,
 }: {
@@ -476,7 +476,7 @@ function RCintelBrandVisual({
 }
 
 /** Wedding RSVP Platform: Authentic Luxury Stationery & RSVP Interface (Strict Privacy: No links, no names, no dates) */
-function WeddingRSVPVisual({ className = "" }: { className?: string }) {
+export function WeddingRSVPVisual({ className = "" }: { className?: string }) {
   return (
     <div
       className={`relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#D8CEBF] bg-[#F7F2E9] p-4 text-[#26221E] shadow-[0_12px_36px_-10px_rgba(38,34,30,0.12)] sm:p-5 ${className}`}

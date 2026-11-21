@@ -54,7 +54,7 @@ function Out({ href, children, primary = false }: { href: string; children: Reac
   );
 }
 
-/** RI360 case study: the data problem, five decisions, a runnable pace model, the screens and the limits. */
+/** RI360 case study: the data problem, six decisions, a runnable pace model, the screens and the limits. */
 export default function RI360CaseStudyPage() {
   return (
     <div className="min-h-screen bg-canvas text-chalk">

@@ -325,7 +325,7 @@ export default async function Image() {
                     lineHeight: 1.1,
                   }}
                 >
-                  96,223 LAPS. ONE PIT WALL.
+                  172,337 LAPS. ONE PIT WALL.
                 </div>
                 <div
                   style={{
@@ -399,8 +399,8 @@ export default async function Image() {
                 }}
               >
                 {[
-                  { n: "96,223", l: "Laps" },
-                  { n: "89", l: "Grands Prix" },
+                  { n: "172,337", l: "Laps" },
+                  { n: "157", l: "Grands Prix" },
                   { n: "0.00", l: "CLS" },
                   { n: "100", l: "Lighthouse" },
                 ].map((stat) => (
